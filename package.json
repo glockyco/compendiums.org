@@ -1,0 +1,16 @@
+{
+  "name": "compendiums-site",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 4173 --directory public",
+    "deploy": "wrangler deploy",
+    "dry-run": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
+    "wrangler": "^4.100.0"
+  }
+}

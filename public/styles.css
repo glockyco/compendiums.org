@@ -1,0 +1,406 @@
+:root {
+  color-scheme: light dark;
+  --bg: oklch(0.985 0.004 230);
+  --bg-rgb: 247 249 251;
+  --ink: oklch(0.16 0.025 245);
+  --muted: oklch(0.39 0.026 235);
+  --subtle: oklch(0.58 0.032 220);
+  --line: oklch(0.62 0.032 205 / 0.36);
+  --line-strong: oklch(0.42 0.055 198 / 0.62);
+  --surface: oklch(0.995 0.002 230 / 0.78);
+  --surface-hover: oklch(0.965 0.018 205 / 0.72);
+  --accent: oklch(0.48 0.075 190);
+  --accent-strong: oklch(0.36 0.085 192);
+  --focus: oklch(0.62 0.12 190 / 0.34);
+  --shadow: 0 18px 70px oklch(0.18 0.025 245 / 0.08);
+  --page: min(1060px, calc(100% - clamp(28px, 6vw, 96px)));
+  font-family:
+    ui-serif,
+    Georgia,
+    Cambria,
+    "Times New Roman",
+    serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: oklch(0.14 0.025 245);
+    --bg-rgb: 13 18 29;
+    --ink: oklch(0.94 0.01 230);
+    --muted: oklch(0.74 0.018 225);
+    --subtle: oklch(0.58 0.032 220);
+    --line: oklch(0.68 0.032 205 / 0.25);
+    --line-strong: oklch(0.72 0.07 190 / 0.5);
+    --surface: oklch(0.18 0.026 245 / 0.72);
+    --surface-hover: oklch(0.24 0.038 230 / 0.76);
+    --accent: oklch(0.73 0.105 188);
+    --accent-strong: oklch(0.82 0.085 188);
+    --focus: oklch(0.73 0.105 188 / 0.42);
+    --shadow: 0 18px 70px oklch(0 0 0 / 0.28);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 50% 15%, oklch(0.86 0.035 190 / 0.32), transparent 28rem),
+    linear-gradient(180deg, var(--bg), var(--bg));
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+}
+
+body::before,
+body::after {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 18% 34%, var(--accent) 0 2px, transparent 3px),
+    radial-gradient(circle at 82% 22%, var(--accent) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 77%, var(--accent) 0 2px, transparent 3px),
+    radial-gradient(circle at 24% 78%, var(--accent) 0 1px, transparent 2px),
+    linear-gradient(115deg, transparent 14%, var(--line) 14.15%, transparent 14.3%),
+    linear-gradient(35deg, transparent 24%, var(--line) 24.1%, transparent 24.25%),
+    linear-gradient(155deg, transparent 69%, var(--line) 69.12%, transparent 69.28%);
+  opacity: 0.42;
+}
+
+body::after {
+  background:
+    radial-gradient(ellipse at 3% 42%, transparent 0 18rem, var(--line) 18.05rem, transparent 18.15rem),
+    radial-gradient(ellipse at 97% 54%, transparent 0 18rem, var(--line) 18.05rem, transparent 18.15rem),
+    repeating-radial-gradient(circle at 50% 8%, transparent 0 4.9rem, var(--line) 5rem 5.03rem);
+  mask-image: linear-gradient(180deg, #000 0%, transparent 88%);
+  opacity: 0.5;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 4px solid var(--focus);
+  outline-offset: 6px;
+}
+
+.page {
+  display: grid;
+  width: var(--page);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 48px) 0 clamp(36px, 7vw, 72px);
+  align-content: start;
+}
+
+.site-header {
+  display: flex;
+  justify-content: center;
+}
+
+.brand {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.72rem;
+  color: var(--ink);
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  line-height: 1;
+  text-decoration: none;
+}
+
+.brand__mark {
+  display: inline-grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  color: var(--accent);
+}
+
+.brand__mark svg,
+.project-link__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.brand__mark svg path:last-child {
+  opacity: 0.42;
+}
+
+.hero {
+  display: grid;
+  gap: clamp(40px, 7vw, 64px);
+  width: min(100%, 790px);
+  margin: clamp(64px, 12vh, 118px) auto 0;
+  text-align: center;
+}
+
+.hero__copy {
+  display: grid;
+  gap: clamp(18px, 3vw, 26px);
+  justify-items: center;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  max-width: 11ch;
+  font-size: clamp(3.4rem, 10vw, 5.85rem);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.hero__copy p {
+  max-width: 58ch;
+  color: var(--muted);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: clamp(1.02rem, 1.6vw, 1.18rem);
+  line-height: 1.72;
+  text-wrap: pretty;
+}
+
+.project-list {
+  display: grid;
+  gap: 0.8rem;
+  text-align: left;
+  min-width: 0;
+}
+
+.project-link {
+  position: relative;
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr) 2rem;
+  min-width: 0;
+  gap: clamp(0.9rem, 2vw, 1.3rem);
+  align-items: center;
+  min-height: 88px;
+  padding: 1rem clamp(1rem, 2.6vw, 1.35rem);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  text-decoration: none;
+  backdrop-filter: blur(12px);
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.project-link::before {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(90deg, transparent, var(--accent), transparent) top / 100% 1px no-repeat,
+    linear-gradient(90deg, transparent, var(--accent), transparent) bottom / 100% 1px no-repeat;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  border-color: var(--accent);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.project-link:hover::before,
+.project-link:focus-visible::before {
+  opacity: 0.36;
+}
+
+.project-link__icon {
+  display: inline-grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--accent-strong);
+}
+
+.project-link__icon svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.project-link__name {
+  min-width: 0;
+  font-size: clamp(1.8rem, 4vw, 2.55rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  overflow-wrap: anywhere;
+}
+
+
+.project-link__arrow {
+  color: var(--accent-strong);
+  font-size: 2rem;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.project-link:hover .project-link__arrow,
+.project-link:focus-visible .project-link__arrow {
+  transform: translateX(4px);
+}
+
+.not-found {
+  display: grid;
+  gap: 1rem;
+  max-width: 680px;
+  margin: clamp(72px, 16vh, 140px) auto 0;
+  text-align: center;
+}
+
+.not-found h1 {
+  max-width: 12ch;
+  margin: 0 auto;
+}
+
+.not-found p {
+  color: var(--muted);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  line-height: 1.7;
+}
+
+.not-found__link {
+  justify-self: center;
+  margin-top: 1rem;
+  color: var(--accent-strong);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-weight: 700;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.22em;
+}
+
+@media (max-width: 680px) {
+  .page {
+    padding-top: 22px;
+  }
+
+  .site-header {
+    justify-content: flex-start;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+  }
+
+  .brand__mark {
+    width: 1.85rem;
+    height: 1.85rem;
+  }
+
+  .hero {
+    margin-top: clamp(46px, 10vh, 72px);
+    text-align: left;
+  }
+
+  .hero__copy {
+    justify-items: start;
+  }
+
+  h1 {
+    max-width: 100%;
+    font-size: clamp(3rem, 15vw, 3.75rem);
+  }
+
+  .hero__copy br {
+    display: none;
+  }
+
+  .project-link {
+    grid-template-columns: 2.75rem minmax(0, 1fr) 1.5rem;
+    min-width: 0;
+    min-height: 82px;
+    padding: 0.9rem;
+  }
+
+  .project-link__icon {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .project-link__icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .project-link__name {
+    font-size: clamp(1.55rem, 9vw, 2.1rem);
+  }
+
+  .project-link__arrow {
+    grid-column: 3;
+    font-size: 1.6rem;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .project-link:hover,
+  .project-link:focus-visible,
+  .project-link:hover .project-link__arrow,
+  .project-link:focus-visible .project-link__arrow {
+    transform: none;
+  }
+}
