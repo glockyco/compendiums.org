@@ -6,11 +6,11 @@ brand
 
 ## Users
 
-Compendiums.org serves players, mod users, wiki readers, and maintainers who want a fast route into public game-reference projects. Visitors may arrive from search, links, or memory of the parent domain; many will only need to choose the relevant project and continue.
+compendiums.org serves players, mod users, wiki readers, and maintainers who want a fast route into public game-reference projects. Visitors may arrive from search, links, or memory of the parent domain; many will only need to choose the relevant project and continue.
 
 ## Product Purpose
 
-Compendiums.org is the public directory for independently deployed game compendium projects. It should make the network feel intentional while keeping each project clearly separate, reachable, and independently maintained.
+compendiums.org is the public directory for independently deployed game compendium projects. It should make the network feel intentional while keeping each project clearly separate, reachable, and independently maintained.
 
 Success means a visitor understands within seconds that the domain hosts practical game data, maps, and reference tools, then reaches Ancient Kingdoms, Ardenfall, or Erenshor without friction.
 
@@ -30,9 +30,10 @@ Avoid portal bloat: no feed, account system, analytics pitch, global search prom
 
 1. Lead with utility: every visual choice should make the three destinations easier to understand and choose.
 2. Show independence: the landing page is a directory for sibling projects, not a parent app shell or routing layer.
-3. Earn trust quietly: clear statuses, real links, restrained copy, and no inflated marketing claims.
-4. Stay game-adjacent, not game-specific: use enough texture and craft to feel at home near game tools, without fantasy UI cosplay.
-5. Keep migration honest: current public URLs are valid links; future `compendiums.org` hostnames are migration targets, not disabled states.
+3. Earn trust quietly: use real links, restrained copy, and no inflated marketing claims.
+4. Stay game-adjacent, not game-specific: use enough atlas-like structure and craft to feel at home near game tools, without fantasy UI cosplay.
+5. Keep routing honest: current public URLs are valid links; future hostname migrations should be reflected only after they are real.
+6. Keep support subordinate: a Ko-fi link may be present as a quiet utility action, but it must not turn the directory into a fundraising page.
 
 ## Accessibility & Inclusion
 

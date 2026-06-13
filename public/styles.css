@@ -149,9 +149,59 @@ a:focus-visible {
   opacity: 0.42;
 }
 
-.hero {
+.support-colophon {
   display: grid;
-  gap: clamp(40px, 7vw, 64px);
+  grid-template-columns: minmax(2.5rem, 1fr) auto minmax(2.5rem, 1fr);
+  gap: clamp(0.9rem, 2.5vw, 1.35rem);
+  align-items: center;
+  margin-top: clamp(20px, 3vw, 28px);
+}
+
+.support-colophon__rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-strong));
+  opacity: 0.5;
+}
+
+.support-colophon__rule:last-child {
+  background: linear-gradient(90deg, var(--line-strong), transparent);
+}
+
+.support-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.48rem;
+  color: var(--muted);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 0.95rem;
+  font-weight: 650;
+  line-height: 1;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.support-link:hover,
+.support-link:focus-visible {
+  color: var(--ink);
+}
+
+.support-link__icon {
+  display: block;
+  width: 1.65rem;
+  height: 1.65rem;
+  color: var(--accent-strong);
+  fill: currentcolor;
+}
+
+.hero {
+  gap: 0;
   width: min(100%, 790px);
   margin: clamp(64px, 12vh, 118px) auto 0;
   text-align: center;
@@ -197,6 +247,7 @@ h1 {
   gap: 0.8rem;
   text-align: left;
   min-width: 0;
+  margin-top: clamp(40px, 7vw, 64px);
 }
 
 .project-link {
@@ -336,6 +387,7 @@ h1 {
     font-size: 1.2rem;
   }
 
+
   .brand__mark {
     width: 1.85rem;
     height: 1.85rem;
@@ -344,6 +396,11 @@ h1 {
   .hero {
     margin-top: clamp(46px, 10vh, 72px);
     text-align: left;
+  }
+
+  .support-colophon {
+    grid-template-columns: minmax(2.25rem, 0.18fr) auto minmax(2.25rem, 1fr);
+    justify-items: start;
   }
 
   .hero__copy {

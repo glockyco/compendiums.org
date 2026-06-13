@@ -1,90 +1,123 @@
 ---
-name: Compendiums.org
-description: A practical directory for independent game compendium projects.
+name: compendiums.org
+description: A clean atlas directory for independent game compendium projects.
 ---
 
-<!-- SEED: re-run /impeccable document once there's code to capture the actual tokens and components. -->
-
-# Design System: Compendiums.org
+# Design System: compendiums.org
 
 ## 1. Overview
 
-**Creative North Star: "The Signal Bench"**
+**Creative North Star: "Clean Atlas"**
 
-Compendiums.org should feel like a maintained workbench for public game data: instruments are labeled, the routes are obvious, and the craft shows through precision rather than decoration. The page is a brand surface, but it should behave like a utility: visitors arrive, identify the right project, and leave for the tool they need.
+compendiums.org is a sparse directory for public game data, maps, and reference tools. It should feel maintained, precise, and slightly map-like without becoming parchment, fantasy UI, or a portal.
 
-The atmosphere is restrained and technical. Use the cobalt/indigo seed as a sparing signal color, not as a full-page wash. The selected motion energy is responsive: interactions should acknowledge the user's movement with subtle feedback, but the page must not choreograph itself like a campaign site.
+The shipped page is intentionally asset-only and text-light: one brand mark, one support action, one heading, one factual sentence, and three large destination links. Each linked project keeps its own hostname and visual identity.
 
-The system explicitly rejects the generic SaaS landing page: no gradient hero, fake metrics, icon-card wallpaper, startup superlatives, or inflated platform language.
+The system explicitly rejects the generic SaaS landing page: no gradient hero, fake metrics, screenshot cards, startup superlatives, or inflated platform language.
 
 **Key Characteristics:**
 
 - Practical, technical, community-built.
-- Restrained signal color, not decorative color flooding.
-- Display + mono typography for a workshop/instrument-panel feel.
-- Clear project availability and honest domain-migration copy.
-- Responsive interaction polish without page-performance theater.
+- Clean atlas linework instead of game-specific ornament.
+- Serif display typography with system sans support text.
+- Three direct project links, with no visible status labels.
+- Light and dark themes from the same restrained signal palette.
 
 ## 2. Colors
 
-Use a restrained signal palette: neutral architecture plus one cobalt/indigo anchor and one secondary accent chosen during implementation.
+Use a restrained signal palette: neutral architecture plus a small teal/cyan signal accent. The accent should read like an atlas registration mark, not decorative color flooding.
 
-### Primary
+### Tokens
 
-- **Signal Cobalt** (`oklch(0.578 0.130 241.7)` seed, final token to be resolved during implementation): reserved for primary links, focus indicators, and one or two key affordances. It should read like a signal light, not a decorative gradient.
-
-### Neutral
-
-- **Workbench Background** (`[to be resolved during implementation]`): the page background. Prefer pure white or pure near-black before any tinted neutral; avoid warm parchment and hidden beige.
-- **Tool Surface** (`[to be resolved during implementation]`): project cards or panels, pulled slightly away from the background for structure.
-- **Ink** (`[to be resolved during implementation]`): body text with at least 7:1 contrast against the background.
-- **Muted Ink** (`[to be resolved during implementation]`): secondary text with at least 3.5:1 contrast against the background.
+- **Light background** (`--bg: oklch(0.985 0.004 230)`): near-white with a slight cool tint.
+- **Dark background** (`--bg: oklch(0.14 0.025 245)`): near-black blue for dark mode.
+- **Ink** (`--ink`): primary text; high contrast in both themes.
+- **Muted Ink** (`--muted`): body copy only; must remain readable against the background.
+- **Line** (`--line`, `--line-strong`): atlas arcs, card borders, and icon rings.
+- **Surface** (`--surface`): translucent link rows with light tonal separation from the page.
+- **Signal Accent** (`--accent`, `--accent-strong`): brand mark, arrows, focus treatment, and hover linework.
 
 ### Named Rules
 
-**The Signal Rarity Rule.** Cobalt earns attention by being rare. Use it on less than 10% of the visible surface.
+**The Signal Rarity Rule.** Teal/cyan earns attention by being rare. Use it for navigation, focus, icon strokes, and the atlas marks only.
 
 **The No-Parchment Rule.** Do not translate “game compendium” into cream paper, ornate borders, medieval styling, or fantasy-map beige.
 
 ## 3. Typography
 
-**Display Font:** `[display font to be chosen at implementation]`
-**Body Font:** `[body font to be chosen at implementation]`
-**Label/Mono Font:** `[mono font to be chosen at implementation]`
+**Display Font:** system serif stack (`ui-serif`, Georgia, Cambria, Times New Roman, serif)
+**Body Font:** system sans stack (`ui-sans-serif`, system UI, Segoe UI, sans-serif)
+**Label Font:** none in the current UI; avoid adding mono labels unless operational metadata becomes visible again.
 
-**Character:** Pair a confident display face with mono labels/details. The display type gives the directory a memorable brand voice; mono details make statuses, domains, and project metadata feel exact.
+**Character:** The serif display type carries the quiet atlas/book-register voice. Sans body copy keeps the factual directory sentence compact and readable. Do not add decorative font loading unless it materially improves the page; the static page should stay fast.
 
 ### Hierarchy
 
-- **Display** (`[weight/size to be chosen]`): hero headline only. Balanced line wrapping required.
-- **Headline** (`[weight/size to be chosen]`): project-section heading or major page statement.
-- **Title** (`[weight/size to be chosen]`): project names and footer groups.
-- **Body** (`[weight/size to be chosen]`): descriptions and supporting copy. Keep line length between 65–75ch.
-- **Label** (`[mono style to be chosen]`): status chips, hostnames, small metadata, and footer technical labels.
+- **Brand**: serif, compact, paired with the four-point mark.
+- **Display**: `Game Compendiums`; large serif, balanced on desktop, constrained on mobile to avoid horizontal overflow.
+- **Body**: one factual sentence, 65ch or shorter, with a desktop-only line break.
+- **Project title**: game name only. No “Compendium,” “Maps,” status chip, hostname, or description in the visible link label.
 
 ### Named Rules
 
-**The Exact Labels Rule.** Domains, statuses, and migration notes use mono or mono-adjacent styling because they are operational facts, not marketing claims.
+**The Exact Names Rule.** Project link labels are exactly `Ancient Kingdoms`, `Ardenfall`, and `Erenshor`.
 
-## 4. Elevation
+## 4. Layout
 
-Default to tonal layering and borders rather than heavy shadows. Project cards should feel placed on a work surface, not floating like SaaS pricing boxes. Hover states may use a small lift or glow if it reinforces clickability and passes reduced-motion requirements.
+Desktop is centered and calm: brand, title, subtitle, and three link rows sit on one vertical axis. Mobile is left-aligned: the brand, heading, copy, and link rows follow the viewport edge while preserving breathing room.
+
+The subtitle keeps an explicit `<br>` on desktop and hides that break on small screens. Mobile must not force horizontal scrolling; `.project-list`, `.project-link`, and `.project-link__name` all need `min-width: 0`.
+
+## 5. Elevation
+
+Default to tonal layering and borders rather than heavy shadows. Project links should feel drawn on a work surface, not floating like SaaS pricing cards. Hover/focus may add a small lift and signal line glow; reduced-motion removes transforms.
 
 ### Named Rules
 
 **The Flat Until Touched Rule.** Surfaces are quiet at rest. Depth appears only through hover, focus, or active state.
 
-## 5. Components
+## 6. Components
 
-## 6. Do's and Don'ts
+### Brand
+
+The brand is the lowercase domain `compendiums.org` with the small atlas/star mark. Keep it linked to `/`.
+
+### Support Link
+
+Use one quiet header action linking to `https://ko-fi.com/wowmuch`. Desktop label: `Support on Ko-fi`. Mobile label: `Support`. Include the Ko-fi icon on the right, matching Ancient Kingdoms' support pattern, but keep the treatment quieter than the project links.
+
+The support action is a utility link, not a campaign section. Do not add donation copy, pricing language, banners, or a footer appeal.
+
+### Hero
+
+The hero uses the visible title `Game Compendiums` and the factual sentence:
+
+`A directory of public game data, maps, and reference tools for Ancient Kingdoms, Ardenfall, and Erenshor.`
+
+### Project Links
+
+Each project is a single large anchor row with an icon, exact game name, and arrow. Current hrefs:
+
+- `Ancient Kingdoms` → `https://ancient-kingdoms.compendiums.org`
+- `Ardenfall` → `https://ardenfall.compendiums.org`
+- `Erenshor` → `https://erenshor-maps.wowmuch1.workers.dev`
+
+Do not show `Available`; all listed projects are available by virtue of being linked.
+
+### 404
+
+The 404 page uses the same brand, atlas background, display type, and restrained copy. It should link back to `/`.
+
+## 7. Do's and Don'ts
 
 ### Do:
 
-- **Do** present Ancient Kingdoms, Ardenfall, and Erenshor as available projects with real public links.
-- **Do** keep domain migration copy factual and subordinate to the primary project links.
-- **Do** use the cobalt signal color sparingly for navigation, focus, and primary affordances.
+- **Do** keep the page static and asset-only unless a real dynamic need appears.
+- **Do** present Ancient Kingdoms, Ardenfall, and Erenshor as direct public links.
+- **Do** use the signal accent sparingly for navigation, focus, and atlas marks.
 - **Do** make keyboard focus visible and at least as prominent as hover.
-- **Do** include reduced-motion alternatives for any entrance or hover animation.
+- **Do** keep mobile overflow at zero horizontal scroll.
+- **Do** keep the Ko-fi support link subordinate to the directory task.
 
 ### Don't:
 
@@ -92,4 +125,4 @@ Default to tonal layering and borders rather than heavy shadows. Project cards s
 - **Don't** let one compendium's game-specific identity dominate the parent domain.
 - **Don't** build a busy fandom portal with crowded navigation or lore-heavy density.
 - **Don't** use fantasy parchment UI, ornate borders, or medieval styling as shorthand for “compendium.”
-- **Don't** disable or mark Ardenfall or Erenshor as unavailable just because their final `compendiums.org` hostnames have not migrated yet.
+- **Don't** add status chips, hostnames, descriptions, screenshots, or footer copy unless the page needs that information to route visitors.
