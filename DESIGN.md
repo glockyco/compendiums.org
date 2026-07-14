@@ -100,7 +100,7 @@ Each project is a single large anchor row with an icon, exact game name, and arr
 
 - `Ancient Kingdoms` → `https://ancient-kingdoms.compendiums.org`
 - `Ardenfall` → `https://ardenfall.compendiums.org`
-- `Erenshor` → `https://erenshor-maps.wowmuch1.workers.dev`
+- `Erenshor` → `https://erenshor.compendiums.org`
 
 Do not show `Available`; all listed projects are available by virtue of being linked.
 
