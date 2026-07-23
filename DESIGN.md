@@ -20,7 +20,7 @@ The system explicitly rejects the generic SaaS landing page: no gradient hero, f
 - Practical, technical, community-built.
 - Clean atlas linework instead of game-specific ornament.
 - Serif display typography with system sans support text.
-- Three direct project links, with no visible status labels.
+- Three direct project links, with a quiet work-in-progress badge only on projects that are not yet fully live.
 - Light and dark themes from the same restrained signal palette.
 
 ## 2. Colors
@@ -56,7 +56,7 @@ Use a restrained signal palette: neutral architecture plus a small teal/cyan sig
 - **Brand**: serif, compact, paired with the four-point mark.
 - **Display**: `Game Compendiums`; large serif, balanced on desktop, constrained on mobile to avoid horizontal overflow.
 - **Body**: one factual sentence, 65ch or shorter, with a desktop-only line break.
-- **Project title**: game name only. No “Compendium,” “Maps,” status chip, hostname, or description in the visible link label.
+- **Project title**: game name only. No "Compendium," "Maps," hostname, or description in the visible link label. A single quiet `Work in progress` badge may sit beneath the name when the project is not yet fully live.
 
 ### Named Rules
 
@@ -125,4 +125,4 @@ The 404 page uses the same brand, atlas background, display type, and restrained
 - **Don't** let one compendium's game-specific identity dominate the parent domain.
 - **Don't** build a busy fandom portal with crowded navigation or lore-heavy density.
 - **Don't** use fantasy parchment UI, ornate borders, or medieval styling as shorthand for “compendium.”
-- **Don't** add status chips, hostnames, descriptions, screenshots, or footer copy unless the page needs that information to route visitors.
+- **Don't** add hostnames, descriptions, screenshots, or footer copy unless the page needs that information to route visitors. A quiet `Work in progress` badge is the only permitted status marker.
