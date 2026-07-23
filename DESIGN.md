@@ -20,7 +20,7 @@ The system explicitly rejects the generic SaaS landing page: no gradient hero, f
 - Practical, technical, community-built.
 - Clean atlas linework instead of game-specific ornament.
 - Serif display typography with system sans support text.
-- Three direct project links, with a quiet work-in-progress badge only on projects that are not yet fully live.
+- Direct project links, with a quiet work-in-progress badge only on projects that are not yet fully live.
 - Light and dark themes from the same restrained signal palette.
 
 ## 2. Colors
@@ -60,7 +60,7 @@ Use a restrained signal palette: neutral architecture plus a small teal/cyan sig
 
 ### Named Rules
 
-**The Exact Names Rule.** Project link labels are exactly `Ancient Kingdoms`, `Ardenfall`, and `Erenshor`.
+**The Exact Names Rule.** Project link labels are exactly `Ancient Kingdoms`, `Ardenfall`, `Erenshor`, and `Fractured Realms`.
 
 ## 4. Layout
 
@@ -92,15 +92,16 @@ The support action is a utility link, not a campaign section. Do not add donatio
 
 The hero uses the visible title `Game Compendiums` and the factual sentence:
 
-`A directory of public game data, maps, and reference tools for Ancient Kingdoms, Ardenfall, and Erenshor.`
+`A directory of public game data, maps, and reference tools for Ancient Kingdoms, Ardenfall, Erenshor, and Fractured Realms.`
 
 ### Project Links
 
-Each project is a single large anchor row with an icon, exact game name, and arrow. Current hrefs:
+Each project is a single large anchor row with an icon, exact game name, and arrow. A project not yet fully live also carries a quiet `Work in progress` badge beneath its name. Links may point at a compendium subdomain or, for early projects, a companion repository. Current hrefs:
 
 - `Ancient Kingdoms` → `https://ancient-kingdoms.compendiums.org`
-- `Ardenfall` → `https://ardenfall.compendiums.org`
+- `Ardenfall` → `https://ardenfall.compendiums.org` (work in progress)
 - `Erenshor` → `https://erenshor.compendiums.org`
+- `Fractured Realms` → `https://github.com/glockyco/fractured-realms-companion` (work in progress)
 
 Do not show `Available`; all listed projects are available by virtue of being linked.
 
@@ -113,7 +114,7 @@ The 404 page uses the same brand, atlas background, display type, and restrained
 ### Do:
 
 - **Do** keep the page static and asset-only unless a real dynamic need appears.
-- **Do** present Ancient Kingdoms, Ardenfall, and Erenshor as direct public links.
+- **Do** present Ancient Kingdoms, Ardenfall, Erenshor, and Fractured Realms as direct public links.
 - **Do** use the signal accent sparingly for navigation, focus, and atlas marks.
 - **Do** make keyboard focus visible and at least as prominent as hover.
 - **Do** keep mobile overflow at zero horizontal scroll.
