@@ -94,6 +94,14 @@ The hero uses the visible title `Game Compendiums` and the factual sentence:
 
 `A directory of public game data, maps, and reference tools for Ancient Kingdoms, Ardenfall, Erenshor, Fractured Realms, and Vespera.`
 
+The game names in this sentence link to their official Steam store pages. Keep those links typographically quiet but recognizable through a restrained underline. They open in the current tab and must not compete with the compendium cards. Current Steam hrefs:
+
+- `Ancient Kingdoms` → `https://store.steampowered.com/app/2241380/Ancient_Kingdoms/`
+- `Ardenfall` → `https://store.steampowered.com/app/1154960/Ardenfall/`
+- `Erenshor` → `https://store.steampowered.com/app/2382520/Erenshor/`
+- `Fractured Realms` → `https://store.steampowered.com/app/3789070/Fractured_Realms/`
+- `Vespera` → `https://store.steampowered.com/app/4824420/Vespera/`
+
 ### Project Links
 
 Each project is a single large anchor with an icon, exact game name, and arrow. Available projects use a current 16:10 screenshot above the link details, presented in a two-column grid on desktop and a single column on mobile. A project not yet fully live belongs in the `Work in progress` group and stays a compact text row without a screenshot. Do not repeat that status inside each project row. Links may point at a compendium subdomain or, for early projects, a companion repository. Current hrefs:
