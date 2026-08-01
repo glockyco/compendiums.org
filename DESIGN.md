@@ -64,7 +64,7 @@ Use a restrained signal palette: neutral architecture plus a small teal/cyan sig
 
 ## 4. Layout
 
-Desktop is centered and calm: brand, title, subtitle, and five link rows sit on one vertical axis. Mobile is left-aligned: the brand, heading, copy, and link rows follow the viewport edge while preserving breathing room.
+Desktop is centered and information-dense: brand, title, subtitle, available-project previews, and the work-in-progress list should all begin within a typical 1119px-tall viewport. Avoid a ceremonial hero gap that delays the directory itself. Mobile is left-aligned: the brand, heading, copy, and link rows follow the viewport edge while preserving breathing room.
 
 The subtitle keeps an explicit `<br>` on desktop and hides that break on small screens. Mobile must not force horizontal scrolling; `.project-list`, `.project-link`, and `.project-link__name` all need `min-width: 0`.
 

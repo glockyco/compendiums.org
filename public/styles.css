@@ -104,7 +104,7 @@ a:focus-visible {
   width: var(--page);
   min-height: 100vh;
   margin: 0 auto;
-  padding: clamp(24px, 5vw, 48px) 0 clamp(36px, 7vw, 72px);
+  padding: clamp(20px, 3vw, 32px) 0 clamp(36px, 7vw, 72px);
   align-content: start;
 }
 
@@ -203,13 +203,13 @@ a:focus-visible {
 .hero {
   gap: 0;
   width: min(100%, 790px);
-  margin: clamp(64px, 12vh, 118px) auto 0;
+  margin: clamp(32px, 5vh, 52px) auto 0;
   text-align: center;
 }
 
 .hero__copy {
   display: grid;
-  gap: clamp(18px, 3vw, 26px);
+  gap: clamp(14px, 2vw, 18px);
   justify-items: center;
 }
 
@@ -220,7 +220,7 @@ p {
 
 h1 {
   max-width: 11ch;
-  font-size: clamp(3.4rem, 10vw, 5.85rem);
+  font-size: clamp(3.2rem, 8vw, 5rem);
   font-weight: 500;
   line-height: 0.96;
   letter-spacing: -0.035em;
@@ -238,16 +238,16 @@ h1 {
     "Segoe UI",
     sans-serif;
   font-size: clamp(1.02rem, 1.6vw, 1.18rem);
-  line-height: 1.72;
+  line-height: 1.6;
   text-wrap: pretty;
 }
 
 .project-list {
   display: grid;
-  gap: clamp(2rem, 5vw, 3rem);
+  gap: clamp(1.6rem, 3vw, 2.25rem);
   text-align: left;
   min-width: 0;
-  margin-top: clamp(40px, 7vw, 64px);
+  margin-top: clamp(28px, 4vw, 40px);
 }
 
 .project-group,
@@ -481,7 +481,7 @@ h1 {
   }
 
   .hero {
-    margin-top: clamp(46px, 10vh, 72px);
+    margin-top: clamp(30px, 6vh, 46px);
     text-align: left;
   }
 
@@ -496,7 +496,7 @@ h1 {
 
   h1 {
     max-width: 100%;
-    font-size: clamp(3rem, 15vw, 3.75rem);
+    font-size: clamp(2.75rem, 14vw, 3.4rem);
   }
 
   .hero__copy br {
