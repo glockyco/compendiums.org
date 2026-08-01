@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "python3 -m http.server 4173 --directory public",
+    "dev": "python3 scripts/dev-server.py",
     "deploy": "wrangler deploy",
     "dry-run": "wrangler deploy --dry-run"
   },
