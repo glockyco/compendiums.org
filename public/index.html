@@ -6,14 +6,14 @@
     <meta name="theme-color" content="#f7f9fb" />
     <meta
       name="description"
-      content="Practical game data, maps, and reference tools for Ancient Kingdoms, Ardenfall, Erenshor, and Fractured Realms."
+      content="Practical game data, maps, and reference tools for Ancient Kingdoms, Ardenfall, Erenshor, Fractured Realms, and Vespera."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://compendiums.org/" />
     <meta property="og:title" content="compendiums.org" />
     <meta
       property="og:description"
-      content="A directory of public game data, maps, and reference tools for Ancient Kingdoms, Ardenfall, Erenshor, and Fractured Realms."
+      content="A directory of public game data, maps, and reference tools for Ancient Kingdoms, Ardenfall, Erenshor, Fractured Realms, and Vespera."
     />
     <meta name="twitter:card" content="summary" />
     <title>compendiums.org — Game Data, Maps, and Reference Tools</title>
@@ -39,12 +39,15 @@
           <h1 id="page-title">Game Compendiums</h1>
           <p>
             A directory of public game data, maps, and reference tools<br />
-            for Ancient Kingdoms, Ardenfall, Erenshor, and Fractured Realms.
+            for Ancient Kingdoms, Ardenfall, Erenshor, Fractured Realms, and Vespera.
           </p>
         </div>
 
-        <nav class="project-list" aria-label="Available compendiums">
-          <a class="project-link" href="https://ancient-kingdoms.compendiums.org">
+        <nav class="project-list" aria-label="Compendium projects">
+          <section class="project-group" aria-labelledby="available-projects">
+            <h2 class="project-group__title" id="available-projects">Available now</h2>
+            <div class="project-group__links">
+              <a class="project-link" href="https://ancient-kingdoms.compendiums.org">
             <span class="project-link__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" focusable="false">
                 <path d="M10 40V17l7 5 7-12 7 12 7-5v23H10Z" />
@@ -52,21 +55,6 @@
               </svg>
             </span>
             <span class="project-link__name">Ancient Kingdoms</span>
-            <span class="project-link__arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="project-link" href="https://ardenfall.compendiums.org">
-            <span class="project-link__icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" focusable="false">
-                <path d="M24 42V8" />
-                <path d="M24 18c7-8 14-8 18-7-1 8-7 14-18 14" />
-                <path d="M24 28c-7-8-14-8-18-7 1 8 7 14 18 14" />
-              </svg>
-            </span>
-            <span class="project-link__body">
-              <span class="project-link__name">Ardenfall</span>
-              <span class="project-link__badge">Work in progress</span>
-            </span>
             <span class="project-link__arrow" aria-hidden="true">→</span>
           </a>
 
@@ -80,6 +68,23 @@
             <span class="project-link__name">Erenshor</span>
             <span class="project-link__arrow" aria-hidden="true">→</span>
           </a>
+            </div>
+          </section>
+
+          <section class="project-group" aria-labelledby="wip-projects">
+            <h2 class="project-group__title" id="wip-projects">Work in progress</h2>
+            <div class="project-group__links">
+              <a class="project-link" href="https://ardenfall.compendiums.org">
+                <span class="project-link__icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" focusable="false">
+                    <path d="M24 42V8" />
+                    <path d="M24 18c7-8 14-8 18-7-1 8-7 14-18 14" />
+                    <path d="M24 28c-7-8-14-8-18-7 1 8 7 14 18 14" />
+                  </svg>
+                </span>
+                <span class="project-link__name">Ardenfall</span>
+                <span class="project-link__arrow" aria-hidden="true">→</span>
+              </a>
 
           <a class="project-link" href="https://github.com/glockyco/fractured-realms-companion">
             <span class="project-link__icon" aria-hidden="true">
@@ -88,12 +93,21 @@
                 <path d="M24 5 18 22 28 26 22 43" />
               </svg>
             </span>
-            <span class="project-link__body">
-              <span class="project-link__name">Fractured Realms</span>
-              <span class="project-link__badge">Work in progress</span>
-            </span>
+            <span class="project-link__name">Fractured Realms</span>
             <span class="project-link__arrow" aria-hidden="true">→</span>
           </a>
+          <a class="project-link" href="https://vespera.compendiums.org">
+            <span class="project-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M33 7a18 18 0 1 0 8 27 16 16 0 1 1-8-27Z" />
+                <path d="m14 13 1.5 4.5L20 19l-4.5 1.5L14 25l-1.5-4.5L8 19l4.5-1.5L14 13Z" />
+              </svg>
+            </span>
+            <span class="project-link__name">Vespera</span>
+            <span class="project-link__arrow" aria-hidden="true">→</span>
+          </a>
+            </div>
+          </section>
         </nav>
 
         <footer class="support-colophon" aria-label="Support">

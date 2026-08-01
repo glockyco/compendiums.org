@@ -11,7 +11,7 @@ description: A clean atlas directory for independent game compendium projects.
 
 compendiums.org is a sparse directory for public game data, maps, and reference tools. It should feel maintained, precise, and slightly map-like without becoming parchment, fantasy UI, or a portal.
 
-The shipped page is intentionally asset-only and text-light: one brand mark, one support action, one heading, one factual sentence, and three large destination links. Each linked project keeps its own hostname and visual identity.
+The shipped page is intentionally asset-only and text-light: one brand mark, one support action, one heading, one factual sentence, and five large destination links grouped by release readiness. Each linked project keeps its own hostname and visual identity.
 
 The system explicitly rejects the generic SaaS landing page: no gradient hero, fake metrics, screenshot cards, startup superlatives, or inflated platform language.
 
@@ -20,7 +20,7 @@ The system explicitly rejects the generic SaaS landing page: no gradient hero, f
 - Practical, technical, community-built.
 - Clean atlas linework instead of game-specific ornament.
 - Serif display typography with system sans support text.
-- Direct project links, with a quiet work-in-progress badge only on projects that are not yet fully live.
+- Direct project links, separated into `Available now` and `Work in progress` groups.
 - Light and dark themes from the same restrained signal palette.
 
 ## 2. Colors
@@ -60,11 +60,11 @@ Use a restrained signal palette: neutral architecture plus a small teal/cyan sig
 
 ### Named Rules
 
-**The Exact Names Rule.** Project link labels are exactly `Ancient Kingdoms`, `Ardenfall`, `Erenshor`, and `Fractured Realms`.
+**The Exact Names Rule.** Project link labels are exactly `Ancient Kingdoms`, `Ardenfall`, `Erenshor`, `Fractured Realms`, and `Vespera`.
 
 ## 4. Layout
 
-Desktop is centered and calm: brand, title, subtitle, and three link rows sit on one vertical axis. Mobile is left-aligned: the brand, heading, copy, and link rows follow the viewport edge while preserving breathing room.
+Desktop is centered and calm: brand, title, subtitle, and five link rows sit on one vertical axis. Mobile is left-aligned: the brand, heading, copy, and link rows follow the viewport edge while preserving breathing room.
 
 The subtitle keeps an explicit `<br>` on desktop and hides that break on small screens. Mobile must not force horizontal scrolling; `.project-list`, `.project-link`, and `.project-link__name` all need `min-width: 0`.
 
@@ -92,16 +92,17 @@ The support action is a utility link, not a campaign section. Do not add donatio
 
 The hero uses the visible title `Game Compendiums` and the factual sentence:
 
-`A directory of public game data, maps, and reference tools for Ancient Kingdoms, Ardenfall, Erenshor, and Fractured Realms.`
+`A directory of public game data, maps, and reference tools for Ancient Kingdoms, Ardenfall, Erenshor, Fractured Realms, and Vespera.`
 
 ### Project Links
 
-Each project is a single large anchor row with an icon, exact game name, and arrow. A project not yet fully live also carries a quiet `Work in progress` badge beneath its name. Links may point at a compendium subdomain or, for early projects, a companion repository. Current hrefs:
+Each project is a single large anchor row with an icon, exact game name, and arrow. A project not yet fully live belongs in the `Work in progress` group. Do not repeat that status inside each project row. Links may point at a compendium subdomain or, for early projects, a companion repository. Current hrefs:
 
 - `Ancient Kingdoms` → `https://ancient-kingdoms.compendiums.org`
 - `Ardenfall` → `https://ardenfall.compendiums.org` (work in progress)
 - `Erenshor` → `https://erenshor.compendiums.org`
 - `Fractured Realms` → `https://github.com/glockyco/fractured-realms-companion` (work in progress)
+- `Vespera` → `https://vespera.compendiums.org` (work in progress)
 
 Do not show `Available`; all listed projects are available by virtue of being linked.
 
@@ -114,7 +115,7 @@ The 404 page uses the same brand, atlas background, display type, and restrained
 ### Do:
 
 - **Do** keep the page static and asset-only unless a real dynamic need appears.
-- **Do** present Ancient Kingdoms, Ardenfall, Erenshor, and Fractured Realms as direct public links.
+- **Do** present Ancient Kingdoms, Ardenfall, Erenshor, Fractured Realms, and Vespera as direct public links.
 - **Do** use the signal accent sparingly for navigation, focus, and atlas marks.
 - **Do** make keyboard focus visible and at least as prominent as hover.
 - **Do** keep mobile overflow at zero horizontal scroll.
@@ -126,4 +127,4 @@ The 404 page uses the same brand, atlas background, display type, and restrained
 - **Don't** let one compendium's game-specific identity dominate the parent domain.
 - **Don't** build a busy fandom portal with crowded navigation or lore-heavy density.
 - **Don't** use fantasy parchment UI, ornate borders, or medieval styling as shorthand for “compendium.”
-- **Don't** add hostnames, descriptions, screenshots, or footer copy unless the page needs that information to route visitors. A quiet `Work in progress` badge is the only permitted status marker.
+- **Don't** add hostnames, descriptions, screenshots, or footer copy unless the page needs that information to route visitors. A quiet `Work in progress` group label is the only permitted status marker.
