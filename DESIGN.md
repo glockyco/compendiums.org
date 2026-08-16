@@ -11,7 +11,7 @@ description: A clean atlas directory for independent game compendium projects.
 
 compendiums.org is a sparse directory for public game data, maps, and reference tools. It should feel maintained, precise, and slightly map-like without becoming parchment, fantasy UI, or a portal.
 
-The shipped page is intentionally static and text-light: one brand mark, one support action, one heading, one factual sentence, and five large destination links grouped by release readiness. Available projects use current screenshots to show the tools before a visitor follows the link. Each linked project keeps its own hostname and visual identity.
+The shipped page is intentionally static and text-light: one brand mark, one support action, one heading, one factual sentence, and four large destination links grouped by release readiness. Available projects use current screenshots to show the tools before a visitor follows the link. Each linked project keeps its own hostname and visual identity.
 
 The system explicitly rejects the generic SaaS landing page: no gradient hero, fake metrics, screenshot cards, startup superlatives, or inflated platform language.
 
@@ -60,7 +60,7 @@ Use a restrained signal palette: neutral architecture plus a small teal/cyan sig
 
 ### Named Rules
 
-**The Exact Names Rule.** Project link labels are exactly `Ancient Kingdoms`, `Ardenfall`, `Erenshor`, `Fractured Realms`, and `Vespera`.
+**The Exact Names Rule.** Project link labels are exactly `Ancient Kingdoms`, `Ardenfall`, `Erenshor`, and `Fractured Realms`.
 
 ## 4. Layout
 
@@ -92,7 +92,7 @@ The support action is a utility link, not a campaign section. Do not add donatio
 
 The hero uses the visible title `Game Compendiums` and the factual sentence:
 
-`A directory of public game data, maps, and reference tools for Ancient Kingdoms, Ardenfall, Erenshor, Fractured Realms, and Vespera.`
+`A directory of public game data, maps, and reference tools for Ancient Kingdoms, Ardenfall, Erenshor, and Fractured Realms.`
 
 The game names in this sentence link to their official Steam store pages. Keep those links typographically quiet but recognizable through a restrained underline. They open in the current tab and must not compete with the compendium cards. Current Steam hrefs:
 
@@ -100,7 +100,6 @@ The game names in this sentence link to their official Steam store pages. Keep t
 - `Ardenfall` → `https://store.steampowered.com/app/1154960/Ardenfall/`
 - `Erenshor` → `https://store.steampowered.com/app/2382520/Erenshor/`
 - `Fractured Realms` → `https://store.steampowered.com/app/3789070/Fractured_Realms/`
-- `Vespera` → `https://store.steampowered.com/app/4824420/Vespera/`
 
 ### Project Links
 
@@ -110,7 +109,6 @@ Each project is a single large anchor with an icon, exact game name, and arrow. 
 - `Ardenfall` → `https://ardenfall.compendiums.org` (work in progress)
 - `Erenshor` → `https://erenshor.compendiums.org`
 - `Fractured Realms` → `https://github.com/glockyco/fractured-realms-companion` (work in progress)
-- `Vespera` → `https://vespera.compendiums.org` (work in progress)
 
 Do not show `Available`; all listed projects are available by virtue of being linked.
 
@@ -123,7 +121,7 @@ The 404 page uses the same brand, atlas background, display type, and restrained
 ### Do:
 
 - **Do** keep the page static and asset-only unless a real dynamic need appears.
-- **Do** present Ancient Kingdoms, Ardenfall, Erenshor, Fractured Realms, and Vespera as direct public links.
+- **Do** present Ancient Kingdoms, Ardenfall, Erenshor, and Fractured Realms as direct public links.
 - **Do** use the signal accent sparingly for navigation, focus, and atlas marks.
 - **Do** keep screenshots current, consistently cropped, and subordinate to the project names.
 - **Do** make keyboard focus visible and at least as prominent as hover.

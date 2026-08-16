@@ -12,7 +12,7 @@ compendiums.org serves players, mod users, wiki readers, and maintainers who wan
 
 compendiums.org is the public directory for independently deployed game compendium projects. It should make the network feel intentional while keeping each project clearly separate, reachable, and independently maintained.
 
-Success means a visitor understands within seconds that the domain hosts practical game data, maps, and reference tools, then reaches Ancient Kingdoms, Ardenfall, Erenshor, Fractured Realms, or Vespera without friction.
+Success means a visitor understands within seconds that the domain hosts practical game data, maps, and reference tools, then reaches Ancient Kingdoms, Ardenfall, Erenshor, or Fractured Realms without friction.
 
 ## Brand Personality
 
@@ -22,13 +22,13 @@ The brand should feel like a well-kept game-tools workshop: useful, direct, main
 
 ## Anti-references
 
-Do not make the apex domain look like it belongs to only one game. Ancient Kingdoms, Ardenfall, Erenshor, Fractured Realms, and Vespera can each retain their own tone on their own subdomains; the parent site should not inherit one project's visual identity wholesale.
+Do not make the apex domain look like it belongs to only one game. Ancient Kingdoms, Ardenfall, Erenshor, and Fractured Realms can each retain their own tone on their own subdomains; the parent site should not inherit one project's visual identity wholesale.
 
 Avoid portal bloat: no feed, account system, analytics pitch, global search promise, or pseudo-platform framing unless those features exist.
 
 ## Design Principles
 
-1. Lead with utility: every visual choice should make the five destinations easier to understand and choose.
+1. Lead with utility: every visual choice should make the four destinations easier to understand and choose.
 2. Show independence: the landing page is a directory for sibling projects, not a parent app shell or routing layer.
 3. Earn trust quietly: use real links, restrained copy, and no inflated marketing claims.
 4. Stay game-adjacent, not game-specific: use enough atlas-like structure and craft to feel at home near game tools, without fantasy UI cosplay.
