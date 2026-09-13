@@ -13,7 +13,7 @@
   --accent-strong: oklch(0.36 0.085 192);
   --focus: oklch(0.62 0.12 190 / 0.34);
   --shadow: 0 18px 70px oklch(0.18 0.025 245 / 0.08);
-  --page: min(1060px, calc(100% - clamp(28px, 6vw, 96px)));
+  --page: min(1180px, calc(100% - clamp(28px, 6vw, 96px)));
   font-family:
     ui-serif,
     Georgia,
@@ -202,7 +202,7 @@ a:focus-visible {
 
 .hero {
   gap: 0;
-  width: min(100%, 790px);
+  width: min(100%, 900px);
   margin: clamp(32px, 5vh, 52px) auto 0;
   text-align: center;
 }
