@@ -281,7 +281,7 @@ h1 {
 }
 
 .project-group--available .project-group__links {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -368,7 +368,7 @@ h1 {
 }
 
 .project-link--featured .project-link__name {
-  font-size: clamp(1.45rem, 3vw, 1.9rem);
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
 }
 
 .project-link--featured:hover .project-link__preview img,
@@ -475,6 +475,12 @@ h1 {
   font-weight: 700;
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.22em;
+}
+
+@media (max-width: 860px) {
+  .project-group--available .project-group__links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 680px) {
