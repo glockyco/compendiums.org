@@ -12,7 +12,7 @@ bun run deploy     # deploys to compendiums.org
 bun run previews   # recaptures every card screenshot from its live site
 ```
 
-`bun run previews afallon` recaptures one card. The first run on a machine needs `bunx playwright install chromium`. Look at the new images before deploying.
+`bun run previews afallon` recaptures one card. Images that changed only by rendering noise are kept, so `git status` afterwards lists exactly the stale previews. The first run on a machine needs `bunx playwright install chromium`. Look at the new images before deploying.
 
 ## Adding a project
 

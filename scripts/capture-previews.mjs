@@ -10,7 +10,8 @@
  * The cards come from public/index.html: every link whose body contains an <img> is
  * captured from the link's href in the dark theme, at a viewport with the image's
  * aspect ratio, and written to the image's path as WebP at the image's width and
- * height.
+ * height. A recapture that differs from the existing image only by rendering noise keeps
+ * the existing file.
  *
  * A capture starts once the page has rendered: the load event has fired, web fonts
  * are ready, the DOM has stopped changing, and every image in view has loaded and
@@ -20,7 +21,7 @@
 
 import { chromium } from 'playwright';
 import sharp from 'sharp';
-import { readFileSync, statSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { basename, extname, resolve } from 'node:path';
 
 const ROOT_DIR = resolve(import.meta.dirname, '..');
@@ -154,6 +155,28 @@ async function waitForRenderedContent(page, area) {
   );
 }
 
+/**
+ * A recapture that changes fewer pixels than this keeps the existing image, because the
+ * difference is rendering noise. Unchanged pages measure 0 changed pixels, real changes
+ * thousands.
+ */
+const CHANGED_PIXELS = 500;
+
+/** Pixels whose summed RGB difference exceeds 60 between the existing image and `candidate`. */
+async function changedPixels(existingPath, candidate) {
+  const [a, b] = await Promise.all(
+    [existingPath, candidate].map((input) => sharp(input).removeAlpha().raw().toBuffer({ resolveWithObject: true }))
+  );
+  if (a.info.width !== b.info.width || a.info.height !== b.info.height) return Infinity;
+  let changed = 0;
+  for (let i = 0; i < a.data.length; i += 3) {
+    const delta =
+      Math.abs(a.data[i] - b.data[i]) + Math.abs(a.data[i + 1] - b.data[i + 1]) + Math.abs(a.data[i + 2] - b.data[i + 2]);
+    if (delta > 60) changed++;
+  }
+  return changed;
+}
+
 console.log(`Capturing ${toCapture.length} card preview(s)...\n`);
 const browser = await chromium.launch();
 for (const card of toCapture) {
@@ -173,7 +196,12 @@ for (const card of toCapture) {
   await context.close();
 
   const output = resolve(PUBLIC_DIR, card.src.replace(/^\//, ''));
-  await sharp(png).resize(card.width, card.height).webp({ quality: QUALITY }).toFile(output);
-  console.log(`    ${card.src}: ${(statSync(output).size / 1024).toFixed(1)} kB`);
+  const image = await sharp(png).resize(card.width, card.height).webp({ quality: QUALITY }).toBuffer();
+  if (existsSync(output) && (await changedPixels(output, image)) < CHANGED_PIXELS) {
+    console.log('    unchanged, kept the existing image');
+    continue;
+  }
+  writeFileSync(output, image);
+  console.log(`    ${card.src}: ${(image.length / 1024).toFixed(1)} kB`);
 }
 await browser.close();
