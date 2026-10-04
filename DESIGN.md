@@ -122,7 +122,7 @@ The 404 page uses the same brand, atlas background, display type, and restrained
 - **Do** keep the page static and asset-only unless a real dynamic need appears.
 - **Do** present Afallon, Ancient Kingdoms, Ardenfall, and Erenshor as direct public links.
 - **Do** use the signal accent sparingly for navigation, focus, and atlas marks.
-- **Do** keep screenshots current, consistently cropped, and subordinate to the project names.
+- **Do** keep screenshots current, consistently cropped, and subordinate to the project names. `bun run previews` recaptures every card image from its live site at the image's size.
 - **Do** make keyboard focus visible and at least as prominent as hover.
 - **Do** keep mobile overflow at zero horizontal scroll.
 - **Do** keep the Ko-fi support link subordinate to the directory task.

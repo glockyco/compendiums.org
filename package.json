@@ -6,11 +6,14 @@
   "scripts": {
     "dev": "python3 scripts/dev-server.py",
     "deploy": "wrangler deploy",
-    "dry-run": "wrangler deploy --dry-run"
+    "dry-run": "wrangler deploy --dry-run",
+    "previews": "node scripts/capture-previews.mjs"
   },
   "devDependencies": {
     "@commitlint/cli": "^21.0.2",
     "@commitlint/config-conventional": "^21.0.2",
+    "playwright": "^1.58.2",
+    "sharp": "^0.35.0",
     "wrangler": "^4.100.0"
   }
 }
