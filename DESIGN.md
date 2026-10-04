@@ -11,7 +11,7 @@ description: A clean atlas directory for independent game compendium projects.
 
 compendiums.org is a sparse directory for public game data, maps, and reference tools. It should feel maintained, precise, and slightly map-like without becoming parchment, fantasy UI, or a portal.
 
-The shipped page is intentionally static and text-light: one brand mark, one support action, one heading, one factual sentence, and three large destination links grouped by release readiness. Available projects use current screenshots to show the tools before a visitor follows the link. Each linked project keeps its own hostname and visual identity.
+The shipped page is intentionally static and text-light: one brand mark, one support action, one heading, one factual sentence, and four large destination links grouped by release readiness. Available projects use current screenshots to show the tools before a visitor follows the link. Each linked project keeps its own hostname and visual identity.
 
 The system explicitly rejects the generic SaaS landing page: no gradient hero, fake metrics, screenshot cards, startup superlatives, or inflated platform language.
 
@@ -102,8 +102,9 @@ The game names in this sentence link to their official Steam store pages. Keep t
 
 ### Project Links
 
-Each project is a single large anchor with an icon, exact game name, and arrow. Available projects use a current 16:10 screenshot above the link details, presented in a two-column grid on desktop and a single column on mobile. A project not yet fully live belongs in the `Work in progress` group and stays a compact text row without a screenshot. Do not repeat that status inside each project row. Every link points at the project's own compendium subdomain. Current hrefs:
+Each project is a single large anchor with an icon, exact game name, and arrow. Available projects use a current 16:10 screenshot above the link details, presented in a three-column grid on desktop, two columns at medium widths, and a single column on mobile. A project not yet fully live belongs in the `Work in progress` group and stays a compact text row without a screenshot. Do not repeat that status inside each project row. Every link points at the project's own compendium subdomain. Current hrefs:
 
+- `Afallon` → `https://afallon.compendiums.org`
 - `Ancient Kingdoms` → `https://ancient-kingdoms.compendiums.org`
 - `Ardenfall` → `https://ardenfall.compendiums.org` (work in progress)
 - `Erenshor` → `https://erenshor.compendiums.org`
@@ -119,7 +120,7 @@ The 404 page uses the same brand, atlas background, display type, and restrained
 ### Do:
 
 - **Do** keep the page static and asset-only unless a real dynamic need appears.
-- **Do** present Ancient Kingdoms, Ardenfall, and Erenshor as direct public links.
+- **Do** present Afallon, Ancient Kingdoms, Ardenfall, and Erenshor as direct public links.
 - **Do** use the signal accent sparingly for navigation, focus, and atlas marks.
 - **Do** keep screenshots current, consistently cropped, and subordinate to the project names.
 - **Do** make keyboard focus visible and at least as prominent as hover.
