@@ -29,3 +29,7 @@ bun run previews   # recaptures every card screenshot from its live site
 ## Design
 
 The page is a plain directory: the game names, screenshots of the current live sites, and links to each compendium's own subdomain. It has no descriptions or marketing copy and does not take on any one game's look. The Ko-fi link stays a quiet link below the projects. Target WCAG AA with full keyboard use and no horizontal scrolling on phones.
+
+## License
+
+The source code is licensed under the [MIT License](LICENSE). The license does not cover the preview screenshots or the games' names, text and artwork they show.
