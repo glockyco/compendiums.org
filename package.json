@@ -15,5 +15,6 @@
     "playwright": "^1.58.2",
     "sharp": "^0.35.0",
     "wrangler": "^4.100.0"
-  }
+  },
+  "packageManager": "bun@1.4.4"
 }

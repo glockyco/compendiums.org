@@ -4,7 +4,7 @@ The landing page at [compendiums.org](https://compendiums.org/). It links to the
 
 ## Setup
 
-You need Bun to install dependencies and run the package scripts, Python available as `python3` for the local server, and Node.js for preview capture. Deployment also needs access to the Cloudflare account.
+Use the Bun version in [`package.json`](package.json) so local installs, Renovate and CI use the same lockfile format. You also need Python available as `python3` for the local server and Node.js for preview capture. Deployment needs access to the Cloudflare account.
 
 ## Commands
 
