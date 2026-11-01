@@ -6,6 +6,8 @@ The landing page at [compendiums.org](https://compendiums.org/). It links to the
 
 Use the Bun version in [`package.json`](package.json) so local installs, Renovate and CI use the same lockfile format. You also need Python available as `python3` for the local server and Node.js for preview capture. Deployment needs access to the Cloudflare account.
 
+[`bunfig.toml`](bunfig.toml) delays newly released dependencies before Bun can resolve them, so fresh releases have time to settle.
+
 ## Commands
 
 ```sh
