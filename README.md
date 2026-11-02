@@ -25,8 +25,9 @@ bun run previews   # recaptures every card screenshot from its live site
 ## Adding a project
 
 1. Add the game to the sentence under the heading and link it to its Steam store page.
-2. Add a card to [`public/index.html`](public/index.html) with the game name as its label. A live project goes under "Available now" with a preview image at `/images/<name>.webp`, sized like the other cards, and its site's logo without a background at `/icons/<name>.webp`, 128 pixels square. Take the logo from the compendium's repository rather than its favicon, because favicons carry a background. Cards are listed in the same order as the projects on glockyco.com. A project that is not live yet goes under "Work in progress" as a row with a line icon and no image.
+2. Add a card to [`public/index.html`](public/index.html) with the game name as its label. A live project goes under "Available now" with a preview image at `/images/<name>.webp`, sized like the other cards, and its site's logo without a background at `/icons/<name>.webp`, 128 pixels square. Take the logo from the compendium's repository rather than its favicon, because favicons carry a background. The compendiums' About pages load these logos from this address, so keep each logo's file name. Cards are listed in the same order as the projects on glockyco.com. A project that is not live yet goes under "Work in progress" as a row with a line icon and no image.
 3. For a new live project, run `bun run previews <name>`. It captures the preview at the size that the card's image declares.
+4. Link the new compendium from the "More Compendiums" section of the other compendiums' About pages.
 
 ## Design
 
